@@ -9,6 +9,8 @@ var mongodb = require("mongodb");
 var mongoClient = mongodb.MongoClient;
 var ObjectId = mongodb.ObjectId;
 const CONNECTIONOPTIONS = {useNewUrlParser: true, useUnifiedTopology: true};
+const CONNECTIONSTRING_Cloud = "mongodb+srv://LookAtOmkar:OmkarSingh19@ecoin.n7u9b.mongodb.net/test";
+const CONNECTIONSTRING_Local = "mongodb://localhost:27017";
 
 var http = require("http").createServer(app);
 var bcrypt = require("bcrypt");
@@ -66,7 +68,7 @@ http.listen(4000, function () {
    	 	next();
 	})	
 
-	mongoClient.connect("mongodb://localhost:27017",CONNECTIONOPTIONS ,function (error, client) {
+	mongoClient.connect(CONNECTIONSTRING_Cloud,CONNECTIONOPTIONS ,function (error, client) {
 		var database = client.db("Ecoin");
 		console.log("Database connected.");
 
