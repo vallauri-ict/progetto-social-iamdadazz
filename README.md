@@ -46,4 +46,4 @@ Per la parte del codice, abbiamo usato mongodbCompass per salvare i database nec
 Abbiamo usato file ejs(Embadded javascript) per unire i codici di programmazione di html e javascript.
 
 
-progetto-social-ECOIN  created by Davidel Darius & Omkar Singh Rathore GitHub Classroom
+**progetto-social-ECOIN  created by Davidel Darius & Omkar Singh Rathore GitHub Classroom**
