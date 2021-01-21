@@ -378,9 +378,7 @@ http.listen(4000, function () {
 		});
 
 		app.get("/post/:id", function (request, result) {
-			database.collection("posts").findOne({
-				"_id": ObjectId(request.params.id)
-			}, function (error, post) {
+			database.collection("posts").find().toArray(function (error, post) {
 				if (post == null) {
 					result.send({
 						"status": "error",
@@ -479,9 +477,7 @@ http.listen(4000, function () {
 
 		app.post("/getNewsfeed", function (request, result) {
 			var accessToken = request.fields.accessToken;
-			database.collection("users").findOne({
-				"accessToken": accessToken
-			}, function (error, user) {
+			database.collection("users").find().toArray(function (error, user) {
 				if (user == null) {
 					result.json({
 						"status": "error",
@@ -493,11 +489,7 @@ http.listen(4000, function () {
 					ids.push(user._id);
 
 					database.collection("posts")
-					.find({
-						"user._id": {
-							$in: ids
-						}
-					})
+					.find()
 					.sort({
 						"createdAt": -1
 					})
