@@ -1,4 +1,4 @@
-# progetto-social-iamdadazz
+# progetto-social- ECOIN
 
 Per orientare sul sito di Ecoin, bisogna prima di tutto registrarsi, inserendo i propri dati necessari, e successivamente al clicco di registrazione ,
 ![A](https://user-images.githubusercontent.com/61886825/105347409-27e7ae80-5be7-11eb-8ea0-63144241d33b.PNG)
